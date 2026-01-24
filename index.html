@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html amp lang="en" amp-version="2405160547000" class="i-amphtml-singledoc i-amphtml-standalone">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <!-- Include jQuery -->
+    <!-- Include Bootstrap JS -->
+    <!-- <script src="./asset/bootstrap.min.js.download"></script> -->
+    <!-- <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animate.css">
+    <link rel="stylesheet" href="./assets/all.min.css">
+    <link rel="stylesheet" href="./assets/style-2.css">
+    <link rel="stylesheet" href="./assets/style-3.css">
+    <link rel="stylesheet" href="./assets/style-5.css">
+    <title>Durveda</title>
+    <link href="./assets/main.f63d1072.chunk.css" rel="stylesheet">
+    <!-- <script async custom-element="amp-auto-lightbox" data-script="amp-auto-lightbox" i-amphtml-inserted crossorigin="anonymous" src="./assets/amp-auto-lightbox-0.1.js.download"></script>-->
+	<style>
+	.highlight{
+        background:#ffeaea;
+        border-left:5px solid #c40000;
+        padding:12px;
+        margin-bottom:15px;
+        font-size:16px;
+		}
+	.benefits{
+        background:#f9f9f9;
+        border-radius:8px;
+        margin-top:4px;
+    }
+	 .cta{
+        margin-top:5px;
+        text-align:center;
+        font-size:18px;
+        font-weight:bold;
+        color:#0a6b00;
+    }
+	/* ===== REVIEW COMPONENT (SCOPED) ===== */
+	/* ===== REVIEW COMPONENT (SCOPED) ===== */
+		#as-review-box {
+			font-family: "Segoe UI", Arial, sans-serif;
+			overflow: hidden;
+			width: 100%;
+			padding: 0 10px; /* Added padding for mobile */
+		}
+
+		#as-review-box .review-header {
+			display: flex;
+			align-items: center;
+		}
+
+		#as-review-box .profile-pic {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-right: 12px;
+			border: 1px solid #ddd;
+			flex-shrink: 0;
+			filter: blur(2px);
+		}
+
+		#as-review-box .review-user {
+			display: flex;
+			flex-direction: column;
+			flex: 1; /* Take remaining space */
+		}
+
+		#as-review-box .name {
+			font-weight: 600;
+			font-size: 18px;
+			color: #1c1e21;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap; /* Wrap on small screens */
+			
+		}
+
+		#as-review-box .verified {
+			height: 16px;
+			margin-left: 6px;
+			flex-shrink: 0;
+		}
+
+		#as-review-box .date {
+			font-size: 15px;
+			color: #65676b;
+			margin-top: 2px;
+			text-align:left; 
+			color:red;
+			font-weight: bold;
+		}
+
+		#as-review-box .review-text {
+			margin-top: 12px;
+			font-size: 15px;
+			line-height: 1.6;
+			color: #050505;
+			word-wrap: break-word; /* Prevent text overflow */
+			text-align:left;
+		}
+
+		#as-review-box .review-card {
+			width: 100%;
+			background: #ffffff;
+			border: 1px solid #e4e6eb;
+			border-radius: 12px;
+			padding: 16px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+			overflow: hidden;
+			margin-bottom: 16px; /* Space between cards */
+			box-sizing: border-box; /* Include padding in width */
+		}
+
+		#as-review-box .review-image {
+			margin-top: 14px;
+			text-align: center;
+			width: 100%;
+		}
+
+		#as-review-box .review-image img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+			border-radius: 8px;
+			margin: 0 auto; /* Center image */
+		}
+
+		/* ===== MOBILE RESPONSIVE ===== */
+		@media (max-width: 600px) {
+			#as-review-box {
+				padding: 0 5px;
+			}
+			
+			#as-review-box .review-card {
+				padding: 12px;
+				border-radius: 8px;
+				margin-bottom: 12px;
+			}
+			
+			#as-review-box .profile-pic {
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+			}
+			
+			#as-review-box .name {
+				font-size: 14px;
+			}
+			
+			#as-review-box .verified {
+				height: 14px;
+				margin-left: 4px;
+			}
+			
+			#as-review-box .date {
+				font-size: 11px;
+			}
+			
+			#as-review-box .review-text {
+				font-size: 14px;
+				line-height: 1.5;
+				margin-top: 10px;
+			}
+			
+			#as-review-box .review-image {
+				margin-top: 10px;
+			}
+		}
+
+		/* Extra small screens */
+		@media (max-width: 400px) {
+			#as-review-box .review-card {
+				padding: 10px;
+				border-radius: 6px;
+			}
+			
+			#as-review-box .profile-pic {
+				width: 36px;
+				height: 36px;
+				margin-right: 8px;
+			}
+			
+			#as-review-box .name {
+				font-size: 13px;
+			}
+			
+			#as-review-box .verified {
+				height: 12px;
+			}
+			
+			#as-review-box .review-text {
+				font-size: 13px;
+				margin-top: 8px;
+			}
+		}
+
+		/* Box5 container responsive */
+		.box5 {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		.box5 h3 {
+			text-align: center;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 600px) {
+			.box5 h3 {
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+		}
+
+		@media (max-width: 400px) {
+			.box5 h3 {
+				font-size: 18px;
+				margin-bottom: 12px;
+			}
+		}
+	
+	/* ===== AMAZON BUTTON SCOPE (NO CONFLICT) ===== */
+	.amz-btn-scope {
+		display: inline-block;
+		width: 100%; /* Full width container */
+		text-align: center; /* Center the button */
+	}
+
+	/* Button */
+	.amz-btn-scope .amz-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px; /* Reduced gap for mobile */
+		padding: 12px 24px; /* Reduced padding */
+		margin: 5px auto; /* Center button, removed left margin */
+		background: #000;
+		border: 2px solid #ffffff;
+		border-radius: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		width: auto; /* Auto width based on content */
+		max-width: 100%; /* Don't exceed container */
+	}
+
+	/* Logo */
+	.amz-btn-scope .amz-btn img {
+		height: 40px; /* Slightly smaller */
+		width: auto; /* Auto width to maintain aspect ratio */
+		max-width: 100px;
+		display: block;
+		transition: transform 0.3s ease;
+		padding:8px 0px 0px 0px;
+	}
+
+	/* Text */
+	.amz-btn-scope .amz-btn span {
+		color: #ffffff;
+		font-size: 18px; /* Slightly smaller */
+		font-weight: 600;
+		letter-spacing: 0.4px;
+		white-space: nowrap;
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 600px) {
+		.amz-btn-scope .amz-btn {
+			gap: 6px;
+			padding: 10px 16px;
+			flex-direction: row; /* Keep horizontal layout */
+			width: 90%; /* Take 90% width on mobile */
+			max-width: 320px; /* Max width limit */
+		}
+		
+		.amz-btn-scope .amz-btn img {
+			height: 40px;
+			max-width: 80px;
+			padding:8px 0px 0px 0px;
+		}
+		
+		.amz-btn-scope .amz-btn span {
+			font-size: 14px;
+		}
+	}
+
+	/* Extra small screens */
+	@media (max-width: 400px) {
+		.amz-btn-scope .amz-btn {
+			gap: 4px;
+			padding: 8px 12px;
+			width: 95%;
+		}
+		
+		.amz-btn-scope .amz-btn img {
+			height: 40px;
+			max-width: 70px;
+			padding:8px 0px 0px 0px;
+		}
+		
+		.amz-btn-scope .amz-btn span {
+			font-size: 12px;
+		}
+	}
+
+
+	/* Box5 heading fully responsive */
+
+	.box5 {
+		width: 100%;
+		max-width: 1200px; /* Maximum width */
+		margin: 0 auto; /* Center the container */
+		padding: 20px 10px;
+		box-sizing: border-box;
+		text-align: center; /* Center all content inside */
+	}
+
+	/* Box5 heading fully responsive aur centered */
+	.box5 h3 {
+		text-align: center;
+		font-size: 28px;
+		margin: 0 auto 20px auto; /* Center with auto margins */
+		padding: 10px 15px;
+		word-wrap: break-word;
+		line-height: 1.3;
+		width: 100%;
+		display: block;
+	}
+
+	.box5 h3 strong {
+		display: inline; /* Changed from block to inline */
+		font-size: inherit;
+		font-weight: 700;
+	}
+
+	/* Tablet screens */
+	@media (max-width: 768px) {
+		.box5 {
+			padding: 15px 8px;
+		}
+		
+		.box5 h3 {
+			font-size: 22px;
+			padding: 8px 12px;
+		}
+	}
+
+	/* Mobile screens */
+	@media (max-width: 600px) {
+		.box5 {
+			padding: 12px 5px;
+		}
+		
+		.box5 h3 {
+			font-size: 18px;
+			padding: 6px 10px;
+			margin-bottom: 15px;
+		}
+	}
+
+	/* Small mobile screens */
+	@media (max-width: 480px) {
+		.box5 h3 {
+			font-size: 16px;
+			padding: 5px 8px;
+		}
+	}
+
+	/* Extra small screens */
+	@media (max-width: 400px) {
+		.box5 h3 {
+			font-size: 15px;
+			padding: 5px 5px;
+			margin-bottom: 12px;
+		}
+	}
+
+	/* Very small screens */
+	@media (max-width: 320px) {
+		.box5 h3 {
+			font-size: 14px;
+			padding: 4px 3px;
+			line-height: 1.2;
+		}
+	}	
+	
+	
+	
+	
+	
+	
+	/* ===== INGREDIENTS SECTION - SCOPED STYLES (NO CONFLICT) ===== */
+    
+    #ayur-ingredients-section * { 
+      box-sizing: border-box; 
+    }
+
+    #ayur-ingredients-section { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      color: #fff; 
+      line-height: 1.6; 
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .ayur-ingredients-container { 
+      max-width: 1000px;
+      margin: 0 auto; 
+      padding: 15px;
+    }
+
+    .ayur-ingredients-heading { 
+      font-size: clamp(22px, 5vw, 28px);
+      color: #00ff9d; 
+      text-align: center; 
+      margin: 30px 0 20px;
+      padding: 0 10px;
+      font-weight: 700;
+    }
+
+    .ayur-ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: clamp(15px, 4vw, 25px);
+      margin: 30px 0;
+      padding: 0 5px;
+    }
+
+    .ayur-ingredient-card { 
+      text-align: center; 
+      background: #1a1a1a; 
+      padding: clamp(12px, 3vw, 20px);
+      border-radius: 15px; 
+      box-shadow: 0 5px 20px rgba(0,0,0,.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ayur-ingredient-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,255,157,.3);
+    }
+
+    .ayur-ingredient-img { 
+      width: 100%; 
+      height: 150px;
+      min-height: 100px;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 12px; 
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .ayur-ingredient-card:hover .ayur-ingredient-img {
+      transform: scale(1.05);
+    }
+
+    .ayur-ingredient-text { 
+      font-size: clamp(13px, 3.2vw, 17px);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .ayur-ingredient-name {
+      color: #00ff9d;
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .ayur-hidden-ingredient {
+      display: none;
+    }
+
+    .ayur-load-more {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .ayur-load-more-btn {
+      background: linear-gradient(#00ff9d, #00cc7a);
+      color: #000;
+      font-weight: bold;
+      padding: clamp(12px, 3vw, 15px) clamp(25px, 6vw, 40px);
+      border: none;
+      border-radius: 50px;
+      font-size: clamp(16px, 4vw, 20px);
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0,255,157,.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ayur-load-more-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 35px rgba(0,255,157,.7);
+    }
+
+    .ayur-load-more-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      .ayur-ingredients-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .ayur-ingredients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .ayur-ingredients-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .ayur-ingredients-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+	
+	/* ===== FORM SUBMIT UI (NO CONFLICT) ===== */
+
+	/* Loader overlay */
+	.ui-loader-overlay {
+	  display: none;
+	  position: fixed;
+	  inset: 0;
+	  background: rgba(0,0,0,0.45);
+	  z-index: 9998;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	/* Loader spinner */
+	.ui-loader {
+	  width: 60px;
+	  height: 60px;
+	  border-radius: 50%;
+	  border: 6px solid #e5e5e5;
+	  border-top: 6px solid #28a745;
+	  animation: uiSpin 0.8s linear infinite;
+	}
+
+	@keyframes uiSpin {
+	  to { transform: rotate(360deg); }
+	}
+
+
+	/* ===== PREMIUM SUCCESS POPUP ===== */
+
+	.ui-popup {
+	  position: fixed;
+	  inset: 0;
+	  display: none;
+	  background: radial-gradient(circle at top, rgba(0,0,0,.55), rgba(0,0,0,.85));
+	  backdrop-filter: blur(6px);
+	  z-index: 9999;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.ui-popup-box {
+	  width: 360px;
+	  padding: 38px 32px;
+	  border-radius: 20px;
+	  background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+	  text-align: center;
+	  box-shadow:
+		0 25px 60px rgba(0,0,0,.35),
+		inset 0 1px 0 rgba(255,255,255,.8);
+	  animation: uiPremiumIn .45s cubic-bezier(.22,1,.36,1);
+	}
+
+	@keyframes uiPremiumIn {
+	  from {
+		opacity: 0;
+		transform: translateY(18px) scale(.92);
+	  }
+	  to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	  }
+	}
+
+	/* ICON */
+	.ui-success-icon {
+	  width: 86px;
+	  height: 86px;
+	  border-radius: 50%;
+	  background: linear-gradient(135deg, #28a745, #6fdc8c);
+	  color: #fff;
+	  font-size: 44px;
+	  font-weight: bold;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin: 0 auto 22px;
+	  box-shadow:
+		0 12px 30px rgba(40,167,69,.45),
+		inset 0 -3px 6px rgba(0,0,0,.2);
+	}
+
+	/* TITLE */
+	.ui-popup-box h4 {
+	  font-size: 22px;
+	  font-weight: 700;
+	  color: #1f2937;
+	  margin-bottom: 10px;
+	}
+
+	/* TEXT */
+	.ui-popup-box p {
+	  font-size: 15px;
+	  line-height: 1.6;
+	  color: #4b5563;
+	  margin-bottom: 26px;
+	}
+
+	/* BUTTON */
+	.ui-popup-box button {
+	  width: 100%;
+	  padding: 14px 0;
+	  border: none;
+	  border-radius: 14px;
+	  background: linear-gradient(135deg, #5f6cff, #7b86ff);
+	  color: #fff;
+	  font-size: 16px;
+	  font-weight: 600;
+	  cursor: pointer;
+	  box-shadow: 0 12px 30px rgba(95,108,255,.45);
+	  transition: all .25s ease;
+	}
+
+	.ui-popup-box button:hover {
+	  transform: translateY(-1px);
+	  box-shadow: 0 18px 40px rgba(95,108,255,.6);
+	}
+
+	.ui-popup-box button:active {
+	  transform: scale(.98);
+	}
+
+	.whatsapp-icon{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+	}
+
+	.whatsapp-icon img{
+		width: 32px;
+		height: 32px;
+	}
+	
+	
+	.display-attack{
+		display:none;
+	}
+	
+	
+	
+	
+	</style>
+</head>
+<body class="amp-mode-mouse" style="opacity: 1; visibility: visible; animation: auto ease 0s 1 normal none running none;">
+	<!-- WhatsApp Floating Button -->
+	<a 	href="https://wa.me/9913521953?text=I%20want%20buy%20Durveda%20Stamina%20Booster"
+		target="_blank"
+		class="whatsapp-icon">
+		<img src="./assets/image/WhatsApp.svg" alt="WhatsApp">
+	</a>
+	
+    <div class="overlay">
+        <div class="overlay__inner">
+            <div class="overlay__content">
+                <span class="spinner"></span>
+            </div>
+        </div>
+    </div>
+    <div id="root">
+        <div id="container">
+            <h1 class="website-head flash-blink-text">लिंग वर्धक आयुर्वेदिक गोली </h1>
+            <h1>लिंग की कमजोरी दूर करें और पहले जैसा जीवन जिएँ।</h1>
+            <div class="row">
+                <div class="left">
+                    <img src="./assets/image/main-img.png" style="width: 100%;">
+					<div class="amz-btn-scope display-attack">
+						<button class="amz-btn pulse phone animated pulse infinite phone-number-state">
+							<span>Now Available on</span>
+							<img src="./assets/image/amazon.png" alt="Amazon Logo">
+						</button>
+					</div>
+                    <a href="tel:9913-521-953" class="phone animated pulse infinite phone-number-state">
+                        <span>
+                            <i class="fa fa-phone" aria-hidden="true"></i> 9913-521-953
+                        </span>
+                    </a>
+                    <img src="./assets/image/SS-BBC.gif" class="gif-images" alt="">
+                </div>
+				
+                <div class="right">
+                    <form id="myForm" class="form-submit orderForm">
+                        <h4 class="animated pulse infinite">Order Now</h4>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" class="form-control" fdprocessedid="jdbxp" required>
+                            <span class="error name-error animated pulse infinite"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="mobile" placeholder="Mobile" class="form-control mobile-length" fdprocessedid="rhq1nc" required>
+                            <span class="error phone-error animated pulse infinite"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="address" placeholder="Address" class="form-control" fdprocessedid="m9xu5w" required>
+                            <span class="error address-error animated pulse infinite"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="pin" placeholder="Pin Code" class="form-control pin-length" fdprocessedid="sa8lsr" required>
+                            <span class="error pin-error animated pulse infinite"></span>
+                        </div>
+                        <div class="form-group center-tag">
+                            <input type="submit" name="" class="animated pulse infinite" value="Submit" fdprocessedid="wdd7lnr">
+                        </div>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="grid grid-pad">
+                <img src="./assets/image/SS-Big.gif" class="gif-images" alt="">
+            </div>
+            <div class="clearfix"></div>
+            <div class="grid grid-pad">
+                <h3>TRUST THE GENUINE PRODUCT : 100% AUTHENTIC</h3>
+                <div class="col-1-4 mobile-col-1-1 colbox1">
+                    <h4>
+                        <strong class="price1">Natural</strong><br>NUTRITIONAL SUPPLEMENT Pack Of 1
+                    </h4>
+                    <h4>
+                        <strong><del>&nbsp;&nbsp;<span class="small-pack-market-price">2210/-</span>&nbsp;&nbsp;</del></strong>
+                    </h4>
+                    <h3 class="animated pulse infinite price">Now Only Rs.<br><span class="small-pack-sale-price">879/-</span></h3>
+                    <a href="#">
+                        <img src="./assets/image/single-product.png" alt="">
+                    </a>
+                    <p>
+						🔥 1 बोतल (1 महीने का पावर कोर्स)
+							ताकत की जबरदस्त शुरुआत
+							30 दिन का दमदार कोर्स
+							लिंग में खून का बहाव बढ़ाकर उसे सख्त और लंबे समय तक खड़ा रखने में मदद करता है, 
+							जिससे पकड़ मजबूत होती है और परफॉर्मेंस साफ़ तौर पर बढ़ती है
+							जोश बढ़ाओ • भरोसा पाओ
+					</p>
+                </div>
+                <div class="col-1-4 mobile-col-1-1 colbox1">
+                    <hr>
+                    <h4>
+                        <strong class="price1">Natural</strong><br>NUTRITIONAL SUPPLEMENT PACK OF 2
+                    </h4>
+                    <h4>
+                        <strong><del>&nbsp;&nbsp;<span class="big-pack-market-price">4420/-</span>&nbsp;&nbsp;</del></strong>
+                    </h4>
+                    <h3 class="animated pulse infinite price">Now Only Rs.<br>
+					<span class="big-pack-sale-price">1399/-</span></h3>
+                    <a href="#">
+                        <img src="./assets/image/combo.png" alt="">
+                    </a>
+                    <p>
+						🔥 2 बोतल (2 महीने का फुल कोर्स)
+						पूरी ताकत का असली खेल
+						60 दिन का दमदार कोर्स
+						लगातार दो महीने लेने से शरीर में खून का बहाव और मजबूत होता है, 
+						नसों में दम आता है और लिंग की सख़्ती देर तक बनी रहती है, 
+						जिससे पकड़ मजबूत होती है और स्टैमिना साफ़ तौर पर बढ़ता है
+						डबल ताकत • पूरा भरोसा
+					</p>
+                </div>
+                <div class="col-1-4 mobile-col-1-1 colbox1">
+                    <h4>
+                        <strong class="price1">A BIGGER</strong><br>AND STRONGER PENIS
+                    </h4>
+                    <a href="#">
+                        <img src="./assets/image/penis-1.jpg" alt="" class="border">
+                    </a>
+                    <p>
+						Durveda Stamina Booster नियमित लेने के बाद, 
+						अपने नए लिंग से हर लड़की में desire जगाओ।
+						खुद में confidence बढ़ाओ और बेडरूम में मज़ा double कर दो!
+					</p>
+                </div>
+                <div class="col-1-4 mobile-col-1-1 colbox1">
+                    <h4>
+                        <strong class="price1">INCREASED</strong><br>ENDURANCE
+                    </h4>
+                    <a href="#">
+                        <img src="./assets/image/penis-2.jpg" alt="" class="border">
+                    </a>
+                    <p>
+						Durveda Stamina Booster के साथ अब वो सब कर पाओ जो पहले मुमकिन नहीं लगता था। 
+						दुर्लभ आयुर्वेदिक इंग्रेडिएंट्स से भरपूर, यह आपके लिंग को लंबा 
+						और मजबूत बनाता है और लंबे समय तक संभोग के लिए ready रखता है।
+					</p>
+                </div>
+            </div>
+            <div class="box2" style="background-color: black;">
+              <!-- INGREDIENTS SECTION -->
+			 <section id="ayur-ingredients-section">
+			  <div class="ayur-ingredients-container">
+				
+				<h2 class="ayur-ingredients-heading">Powerful Ayurvedic Ingredients</h2>
+				
+				<div class="ayur-ingredients-grid" id="ayurIngredientsGrid">
+				  
+				  <!-- Visible Ingredients -->
+				  <div class="ayur-ingredient-card">
+					<img src="./assets/image/ashwagandha.jpg" alt="Ashwagandha" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Ashwagandha</strong>
+					  Boosts Testosterone, Reduces Stress
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card">
+					<img src="./assets/image/shilajit.webp" alt="Shilajit" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Shilajit</strong>
+					  Boosts Energy & Stamina
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card">
+					<img src="./assets/image/Safed Musli.jpg" alt="Safed Musli" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Safed Musli</strong>
+					  Increases Libido & Power
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card">
+					<img src="./assets/image/Kaunch Beej.jfif" alt="Kaunch Beej" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Kaunch Beej</strong>
+					  Improves strength & confidence
+					</p>
+				  </div>
+				  
+				  <!-- Hidden Ingredients -->
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/gokshura.jfif" alt="Gokshura" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Gokshura</strong>
+					  Boosts power & vitality
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/yashad bhasma.webp" alt="Yashad Bhasma" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Yashad Bhasma</strong>
+					  Supports libido & stamina
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Akarkara.jpg" alt="Akarkara" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Akarkara</strong>
+					  Boosts sexual stamina
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Shatavari.webp" alt="Shatavari" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Shatavari</strong>
+					  Boosts immunity & Supports sexual health
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/vidarikand.webp" alt="Vidarikand" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Vidarikand</strong>
+					  Supports muscle & bone health
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Mucuna Pruriens Seed.jpg" alt="Mucuna Pruriens" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Mucuna Pruriens</strong>
+					  Boosts sexual health & libido
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Trikatu.jfif" alt="Trikatu" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Trikatu</strong>
+					  Enhances bioavailability of herbs
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Jaiphal.jfif" alt="Jaiphal" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Jaiphal</strong>
+					  Detoxifies body
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Javitri.webp" alt="Javitri" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Javitri</strong>
+					  Boosts appetite
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/lavang.webp" alt="Lavang" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Lavang</strong>
+					  Improves blood circulation
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Sida Cordifolia.jpg" alt="Sida Cordifolia" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Bala Cordifolia</strong>
+					  Boosts sexual performance & stamina
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Makardwaj.webp" alt="Makardwaj" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Makardwaj</strong>
+					  Improves overall sexual wellness
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/abhrak-bhasma-500x500.webp" alt="Abhrak Bhasma" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Abhrak Bhasma</strong>
+					  Improves libido and fertility
+					</p>
+				  </div>
+				  
+				  <div class="ayur-ingredient-card ayur-hidden-ingredient">
+					<img src="./assets/image/Kuchla.jpg" alt="Kuchla" class="ayur-ingredient-img">
+					<p class="ayur-ingredient-text">
+					  <strong class="ayur-ingredient-name">Kuchla</strong>
+					  Increases vigor and endurance
+					</p>
+				  </div>
+				  
+				</div>
+
+				<!-- Load More Button -->
+				<div class="ayur-load-more">
+				  <button id="ayurShowAllIngredientsBtn" class="ayur-load-more-btn">
+					↓ Show All Ingredients
+				  </button>
+				</div>
+				
+			  </div>
+			</section>
+			
+			</div>
+			<div class="amz-btn-scope display-attack">
+				<button class="amz-btn pulse phone animated pulse infinite phone-number-state">
+					<span>Now Available on</span>
+					<img src="./assets/image/amazon.png" alt="Amazon Logo">
+				</button>
+			</div>
+            <a href="tel:9913-521-953" class="phone animated pulse infinite phone-number-state">
+                <span>
+                    <i class="fa fa-phone" aria-hidden="true"></i>9913-521-953
+                </span>
+            </a>
+            <a href="#" class="commander">
+                <img src="./assets/image/order-now-banner.png" alt="">
+            </a>
+            <div class="box2">
+                <h3>EXPERTS EXPLAIN HOW IT WORKS</h3>
+                <div class="info">
+                    <img src="./assets/image/penis-bio-1.jpg" alt="">
+                    <h4>🔥 Durveda Stamina Booster – मर्दानगी का असली दम! 🔥<br></h4>
+                    <p>
+						<div class="highlight">
+							💥 <strong>कड़वा सच (The Truth):</strong><br>
+								ज़्यादा हस्तमैथुन से लिंग की नसें दब जाती हैं और कमज़ोर पड़ जाती हैं,
+								जिससे खून का फ्लो घटता है और लिंग टाइट नहीं हो पाता।
+						</div>
+						<h2><b>💪 कैसे काम करता है:</b></h2>
+						<ul style="list-style-type: disc; padding-left: 20px;">
+							<li>खून का बहाव तेज करता है</li>
+							<li>जड़ की मांसपेशियों को आराम देता है</li>
+							<li>इरेक्शन को लंबा और मजबूत बनाता है</li>
+						</ul>
+						<div class="benefits">
+							
+							<h2 style="padding-top: 3px; padding-bottom: 1px;"><b>
+								⚡ तुरंत फायदे:</b></h2>
+							<ul style="list-style-type: disc; padding-left: 20px;">
+								<li>मजबूत और देर तक टिकने वाला इरेक्शन।</li>
+								<li>ताकत और स्टैमिना बढ़ाने के लिए</li>
+							</ul>
+						</div>
+					</p>
+					
+                </div>
+				
+                <div class="info">
+                    <img src="./assets/image/penis-bio-2.jpg" alt="">
+                    <h4>Durveda Stamina Booster का दमदार फ़ॉर्मूला</h4>
+                    <p>Durveda Stamina Booster
+					बचपन से ज़्यादा किए गए हस्तमैथुन से आई कमजोरी को दूर करता है
+					और हद से ज़्यादा हस्तमैथुन से लिंग की नसों में आई खराबी को ठीक करता है।
+
+					इसमें मौजूद
+					मकरध्वज (Makardwaj) – लिंग और शरीर में जान डालने वाला दमदार योग
+					अभ्रक भस्म (Abhrak Bhasma) – कमज़ोर नसों को अंदर से मज़बूती देने वाला
+					बला (Bala) – लिंग की नसों और ताकत को सहारा देने वाली जड़ी
+					अकरकरा (Akarkara) – मर्दाना जोश और कड़कपन बढ़ाने में मशहूर
+
+					ये सब मिलकर
+					लिंग की नसों को मज़बूत करते हैं,
+					शरीर के रस को गाढ़ा करते हैं,
+					और ढीलेपन को हटाकर पूरा मर्दाना दम और कड़कपन वापस लाते हैं।
+
+					Durveda Stamina Booster
+					जोश बढ़ाए
+					दम लौटाए
+					और कमज़ोर लिंग को फिर से ताकतवर बनाए।</p>
+                </div>
+            </div>
+			<div class="cta">
+				Durveda Stamina Booster – सिर्फ सप्लीमेंट नहीं,
+				आपकी मर्दानगी का असली साथी!
+			</div>
+			<div class="amz-btn-scope display-attack">
+				<button class="amz-btn pulse phone animated pulse infinite phone-number-state">
+					<span>Now Available on</span>
+					<img src="./assets/image/amazon.png" alt="Amazon Logo">
+				</button>
+			</div>
+            <a href="tel:9913-521-953" class="phone animated pulse infinite phone-number-state">
+                <span>
+                    <i class="fa fa-phone" aria-hidden="true"></i> 9913-521-953
+                </span>
+            </a>
+            <div class="box3">
+                <h3>OUR CUSTOMERS TESTIFY OF INCREDIBLE EFFICIENCY</h3>
+                <a href="#">
+                    <img src="./assets/image/graph.png" alt="">
+                </a>
+            </div>
+            <a href="#" class="commander">
+                <img src="./assets/image/order-now-banner.png" alt="">
+            </a>
+            <div class="box4">
+                <img src="./assets/image/male-female-3.png" alt="">
+                <h3>FREQUENTLY ASKED QUESTIONS</h3>
+                <p>
+					<strong>क्या मैं सच में अपना लिंग बड़ा कर सकता हूँ?</strong>
+					Yes, हाँ! अगर तुम हमारा सही ट्रीटमेंट और टिप्स फॉलो करोगे, तो तुम्हारा लिंग ज्यादा खून लेने लगेगा, size 
+					भी बढ़ेगा, और सेक्स कुछ ही हफ्तों में दमदार और जबरदस्त बन जाएगा। मज़ा double होगा, परफॉर्मेंस top-level, 
+					और confidence पूरा sky-high! अब हर लड़की/पार्टनर के सामने तुम खुद पर गर्व कर सकोगे, 
+					अपनी नई परफॉर्मेंस का मज़ा उठाओगे, और हर बार अपने game को next level पर ले जाओगे!
+				</p>
+				
+                <p>
+					<strong>मैं अपना लिंग कितना बड़ा कर सकता हूँ?</strong>
+					असली सवाल तो यह होना चाहिए: ‘मेरा लिंग कितना बड़ा होना चाहिए?’
+					आपका लिंग बड़ा हो सकता है, लेकिन हम सब अलग-अलग होते हैं। कुछ पुरुषों का लिंग लंबा होता है, कुछ का मोटा, और कुछ का दोनों—लंबा और मोटा!
+					दूसरा असली सवाल: ‘यह बढ़ना कब बंद होगा?’
+					शरीर की बनावट के अनुसार, 9 इंच से ज्यादा लंबे लिंग से महिलाओं को ज्यादा आनंद नहीं मिलता। इससे भी बुरा, बहुत बड़ा लिंग कभी-कभी उन्हें दर्द भी दे सकता है।
+					पोर्न फिल्मों में दिखाए जाने वाले लिंग बहुत बड़े होते हैं, लेकिन ये standard नहीं हैं, ये सिर्फ उनके काम के लिए होते हैं। असली जिंदगी में, आम महिलाएं आपके नए लिंग से भरपूर आनंद उठाएंगी!
+					हम इस बात पर जोर देते हैं: लिंग बड़ा होना चाहिए, लेकिन इतना भी बड़ा नहीं कि असामान्य लगे। अन्यथा महिलाएं असहज महसूस करेंगी।
+					और सबसे महत्वपूर्ण बात: हमारा समाधान शक्तिशाली है, लेकिन खुराक से अधिक न लें। आप खुद देखेंगे कि आप 95% पुरुषों से बड़े लिंग के साथ महिलाओं को चरम सुख दे पा रहे हैं!
+				</p>
+                <p>
+					<strong>मुझे पेमेंट और डिलीवरी को लेकर कुछ सवाल हैं।</strong>
+					Durveda एक विश्वसनीय आयुर्वेदिक ब्रांड है, जिस पर हजारों ग्राहक भरोसा करते हैं। हम गुणवत्ता, गोपनीयता और समय पर डिलीवरी को सबसे ज़्यादा महत्व देते हैं। 
+					हर ऑर्डर को पूरी सावधानी के साथ उसी दिन प्रोसेस किया जाता है और 3–7 कार्यदिवसों के भीतर सुरक्षित व पूरी तरह गोपनीय पैकेजिंग में आपके पते तक पहुँचाया जाता है।
+					हमारा प्रोडक्ट Amazon पर उपलब्ध है, जहाँ आप भरोसे के साथ ऑर्डर कर सकते हैं।
+					इसके अलावा, ग्राहक की सुविधा को ध्यान में रखते हुए कॉल पर ऑर्डर देने की सुविधा भी उपलब्ध है, ताकि जिन्हें ऑनलाइन प्रक्रिया में असुविधा हो, वे आसानी से ऑर्डर कर सकें।
+					Durveda आपके भरोसे और प्राइवेसी का पूरा सम्मान करता है—पैकेजिंग पर किसी भी तरह की व्यक्तिगत या संवेदनशील जानकारी नहीं लिखी जाती।
+				</p>
+                <a href="#" class="commande animated pulse infinite">
+				<span>&gt;&gt;</span> ORDER ONLINE NOW <span>&lt;&lt;</span></a>
+            </div>
+            <div class="box5">
+                
+                <h3>
+					<strong>What Our Customers Say</strong>
+					
+				</h3>
+                <div id="as-review-box">
+				<p>	
+					<div class="review-card">
+
+						<div class="review-header">
+							<img 
+								src="assets/image/2026-01-23 20_57_27-Downloads - File Explorer.png"
+								class="profile-pic"
+								alt="Amit Sharma">
+
+							<div class="review-user">
+								<div class="name">
+									Amit Sharma
+									<img 
+										class="verified"
+										src="assets/image/public.svg"
+										alt="Verified">
+								</div>
+								<div class="date" >02 Jun 2025</div>
+							</div>
+						</div>
+
+						<div class="review-text">
+							ye product 100% kam karta he 3 hafte me result 
+							deta he maja ageya is ko use kar ke 
+						</div>
+
+					</div>
+					<div class="review-card">
+
+						<div class="review-header">
+							<img 
+								src="assets/image/images (1).jpg"
+								class="profile-pic"
+								alt="Brijesh Soni">
+
+							<div class="review-user">
+								<div class="name">
+									Brijesh Soni
+									<img 
+										class="verified"
+										src="assets/image/public.svg"
+										alt="Verified">
+								</div>
+								<div class="date">09 Aug 2025</div>
+							</div>
+						</div>
+
+						<div class="review-text">
+							mera ling khara hoke thore der me sikur jata tha ak dam rabar jese porn dek ke v khara nei hotatha 
+							to mene Durveda Stamina Booster leya sat me mene in ka guides follow keya aur 2 hafte me to jese maja he ageya 
+							avi me bar bar sex karta hu mera wife mere se bahut khus raheta he abhi Thank You Durveda Stamina Booster
+						</div>
+
+						<div class="review-image">
+							<img src="assets/image/undies-down-and-big-dick-out.jpg" alt="Review Image">
+						</div>
+
+					</div>
+					<div class="review-card">
+
+						<div class="review-header">
+							<img 
+								src="assets/image/images.jpg"
+								class="profile-pic"
+								alt="Brijesh Soni">
+
+							<div class="review-user">
+								<div class="name">
+									Aakash Singh
+									<img 
+										class="verified"
+										src="assets/image/public.svg"
+										alt="Verified">
+								</div>
+								<div class="date">17 Sep 2025</div>
+							</div>
+						</div>
+
+						<div class="review-text">
+							mera ling bekar hogeya tha sex he nehi atatha durveda Stamina 
+							Booster leneke bad avi me apna GF ko khub chod ta hu mera GF mere 
+							se sex kara ne ka leye all time ready raheta he is dawa me jadu he sach me 
+						</div>
+
+						<div class="review-image">
+							<img src="assets/image/images (2).jfif" alt="Review Image">
+						</div>
+
+					</div>
+					<div class="review-card">
+
+						<div class="review-header">
+							<img 
+								src="assets/image/c8b276ea169aecb66cd0b7e6ad114274.jpg"
+								class="profile-pic"
+								alt="Brijesh Soni">
+
+							<div class="review-user">
+								<div class="name">
+									Deepak Patel
+									<img 
+										class="verified"
+										src="assets/image/public.svg"
+										alt="Verified">
+								</div>
+								<div class="date">10 May 2025</div>
+							</div>
+						</div>
+
+						<div class="review-text">
+							mera ling thore der tak tik pata tha is ko lene ke bad me jabtak chau 
+							tab tak sex kar pata hu full enjoy karne ko milta he avi product akm karta he sach me
+							
+						</div>
+
+						<div class="review-image">
+							<img src="assets/image/446_1000.jpg" alt="Review Image">
+						</div>
+
+					</div>
+				</p>	
+				</div>
+               
+            </div>
+            <a href="#" class="commander">
+                <img src="./assets/image/order-now-banner.png" alt="">
+            </a>
+        </div>
+		<div class="amz-btn-scope display-attack">
+			<button class="amz-btn pulse phone animated pulse infinite phone-number-state">
+				<span>Now Available on</span>
+				<img src="./assets/image/amazon.png" alt="Amazon Logo">
+			</button>
+		</div>
+        <a href="tel:9913-521-953" class="phone animated pulse infinite phone-number-state">
+            <span>
+                <i class="fa fa-phone" aria-hidden="true"></i> 9913-521-953
+            </span>
+        </a>
+        <div class="container">
+            <div class="col-md-6 offset-md-3">
+                <form method="post" class="form-submit orderForm btm" style="margin-bottom: 100px;">
+                    <h4 class="animated pulse infinite">Order Now</h4>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" class="form-control" fdprocessedid="1k6sfw">
+                        <span class="error name-error animated pulse infinite"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="mobile" placeholder="Mobile" class="form-control mobile-length" fdprocessedid="w0ts8">
+                        <span class="error phone-error animated pulse infinite"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="address" placeholder="Address" class="form-control" fdprocessedid="a6lvcq">
+                        <span class="error address-error animated pulse infinite"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="pin" placeholder="Pin Code" class="form-control pin-length" fdprocessedid="9b6qvs">
+                        <span class="error pin-error animated pulse infinite"></span>
+                    </div>
+                    <div class="form-group center-tag">
+                        <input type="submit" name="" class="animated pulse infinite" value="Submit" fdprocessedid="ow7683">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <!--
+		<section class="popup-form">
+            <div class="popup-body">
+               <button type="button" class="popup-close-btn"><i class="fa fa-times"></i></button>
+               <div class="header">
+                  <h3 class="flash-blink-text">50% डिस्काउंट पाने के लिए तुरंत आर्डर करें</h3>
+               </div>
+               <form method="post" class="form-submit orderForm">
+                 <h4 class="animated pulse infinite">Order Now</h4>
+                 <div class="form-group">
+                     <input type="text" name="name" placeholder="Name" class="form-control" >
+                 </div>
+                 <div class="form-group">
+                     <input type="number" name="phone" placeholder="Mobile" class="form-control mobile-length" >
+                 </div>
+                 <div class="form-group">
+                     <input type="text" name="address" placeholder="Address" class="form-control" >
+                 </div>
+                 <div class="form-group">
+                     <input type="number" name="pin" placeholder="Pin Code" class="form-control pin-length" >
+                 </div>
+                 <div class="form-group center-tag">
+                     <button name="submit" class="animated pulse infinite">Submit</button>
+                 </div>
+             </form>
+            </div>
+        </section> -->
+        <div id="order-placed" class="show">
+            <img src="./assets/image/product.png" alt="">
+            <div>
+                <p>अभी अभी <span class="name">Abhishek</span>, 
+				<span class="city">Amaravati</span>, 
+				<span class="state">Andhra Pradesh</span> ने खरीद लिया  Durveda Stamina Booster</p>
+                <button type="button" fdprocessedid="jrdh9">X</button>
+            </div>
+        </div>
+    </div>
+    
+	
+<!-- Loader -->
+<div class="ui-loader-overlay">
+  <div class="ui-loader"></div>
+</div>
+
+<!-- Popup -->
+<div class="ui-popup">
+  <div class="ui-popup-box">
+    <div class="ui-success-icon">✓</div>
+    <h4>Order Successful</h4>
+    <p> Thank you for Ordering Durveda Stamina Booster. We will contact you soon</p>
+    <button data-ui-close>OK</button>
+  </div>
+</div>	
+</body>
+
+<script src="./assets/jquery-3.6.0.min.js"></script>
+<script src="./assets/sweetalert2.all.min.js"></script>
+<script src="./assets/custom-script.js"></script>
+<script>
+
+(function() {
+  const showBtn = document.getElementById('ayurShowAllIngredientsBtn');
+  let isExpanded = false;
+
+  if (showBtn) {
+    showBtn.onclick = () => {
+      const hiddenItems = document.querySelectorAll('.ayur-hidden-ingredient');
+      
+      if (!isExpanded) {
+        hiddenItems.forEach(item => item.style.display = 'block');
+        showBtn.innerHTML = '↑ Show Less Ingredients';
+        isExpanded = true;
+      } else {
+        hiddenItems.forEach(item => item.style.display = 'none');
+        showBtn.innerHTML = '↓ Show All Ingredients'; // Yahan (18 Total) hata do
+        isExpanded = false;
+        
+        // Smooth scroll back
+        const grid = document.getElementById('ayurIngredientsGrid');
+        if (grid) {
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    };
+  }
+})();	
+(function () {
+  const forms = document.querySelectorAll(".orderForm");
+  const loader = document.querySelector(".ui-loader-overlay");
+  const popup = document.querySelector(".ui-popup");
+  const closeBtn = document.querySelector("[data-ui-close]");
+
+  if (!forms.length || !loader || !popup) return;
+
+  const ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbwvuU6ogMilW0v2lleR2AbBQ6iZs7HWk2L9gUgrOGq5V9770U21X3on9k6cAEuNjYkv/exec";
+
+  forms.forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      loader.style.display = "flex";
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        body: new FormData(form)
+      })
+        .then(() => {
+          loader.style.display = "none";
+          popup.style.display = "flex";
+          form.reset();
+        })
+        .catch(() => {
+          loader.style.display = "none";
+          alert("Submission failed");
+        });
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
+})();
+</script>
+
+</html>
