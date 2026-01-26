@@ -663,7 +663,7 @@ form button:hover {
 
 .grid-pad {
     padding-top: 20px;
-    padding-left: 20px
+ /* padding-left: 20px */
 }
 
 .push-right {
@@ -1248,3 +1248,4 @@ html {
         width: 250px;
     }
 }
+
