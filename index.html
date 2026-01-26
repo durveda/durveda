@@ -1348,7 +1348,6 @@
 <script src="./assets/sweetalert2.all.min.js"></script>
 <script src="./assets/custom-script.js"></script>
 <script>
-
 (function() {
   const showBtn = document.getElementById('ayurShowAllIngredientsBtn');
   let isExpanded = false;
@@ -1356,25 +1355,23 @@
   if (showBtn) {
     showBtn.onclick = () => {
       const hiddenItems = document.querySelectorAll('.ayur-hidden-ingredient');
-      
+
       if (!isExpanded) {
         hiddenItems.forEach(item => item.style.display = 'block');
         showBtn.innerHTML = '↑ Show Less Ingredients';
         isExpanded = true;
       } else {
         hiddenItems.forEach(item => item.style.display = 'none');
-        showBtn.innerHTML = '↓ Show All Ingredients'; // Yahan (18 Total) hata do
+        showBtn.innerHTML = '↓ Show All Ingredients';
         isExpanded = false;
-        
-        // Smooth scroll back
+
         const grid = document.getElementById('ayurIngredientsGrid');
-        if (grid) {
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     };
   }
-})();	
+})();
+
 (function () {
   const forms = document.querySelectorAll(".orderForm");
   const loader = document.querySelector(".ui-loader-overlay");
@@ -1383,27 +1380,43 @@
 
   if (!forms.length || !loader || !popup) return;
 
-  const ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbwvuU6ogMilW0v2lleR2AbBQ6iZs7HWk2L9gUgrOGq5V9770U21X3on9k6cAEuNjYkv/exec";
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycbwvuU6ogMilW0v2lleR2AbBQ6iZs7HWk2L9gUgrOGq5V9770U21X3on9k6cAEuNjYkv/exec";
 
   forms.forEach(form => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      // ✅ 10 digit mobile validation (India) - STOP SUBMIT HERE
+      const mobileInput = form.querySelector('input[name="mobile"]');
+      const mobile = (mobileInput?.value || "").trim();
+
+      if (!/^[6-9]\d{9}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number (starts with 6-9)");
+        mobileInput.focus();
+        return; // ❌ stop: no fetch, no popup, no CPA
+      }
+
       loader.style.display = "flex";
 
       fetch(ENDPOINT, {
         method: "POST",
         body: new FormData(form)
       })
-        .then(() => {
-          loader.style.display = "none";
-          popup.style.display = "flex";
-          form.reset();
-        })
-        .catch(() => {
-          loader.style.display = "none";
-          alert("Submission failed");
-        });
+      .then(() => {
+        loader.style.display = "none";
+        popup.style.display = "flex";
+        form.reset();
+
+        // ✅ TrafficStars CPA – fire ONLY ONCE per session
+        if (!sessionStorage.getItem("ts_lead_fired")) {
+          sessionStorage.setItem("ts_lead_fired", "1");
+          new Image().src = "https://tsyndicate.com/api/v2/cpa/251954/pixel.gif?goalid=0";
+        }
+      })
+      .catch(() => {
+        loader.style.display = "none";
+        alert("Submission failed");
+      });
     });
   });
 
@@ -1414,5 +1427,4 @@
   }
 })();
 </script>
-
 </html>
